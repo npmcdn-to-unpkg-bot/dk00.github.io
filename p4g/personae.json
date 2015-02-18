@@ -1,0 +1,817 @@
+[{
+  "level": 1,
+  "arcana": "愚者",
+  "name": "イザナギ"
+}, {
+  "level": 7,
+  "arcana": "愚者",
+  "name": "ヨモツシコメ"
+}, {
+  "level": 13,
+  "arcana": "愚者",
+  "name": "オバリヨン"
+}, {
+  "level": 21,
+  "arcana": "愚者",
+  "name": "レギオン"
+}, {
+  "level": 31,
+  "arcana": "愚者",
+  "name": "オセ"
+}, {
+  "level": 38,
+  "arcana": "愚者",
+  "name": "ジャアクフロスト"
+}, {
+  "level": 46,
+  "arcana": "愚者",
+  "name": "デカラビア"
+}, {
+  "level": 56,
+  "arcana": "愚者",
+  "name": "シキオウジ"
+}, {
+  "level": 64,
+  "arcana": "愚者",
+  "name": "ロキ"
+}, {
+  "level": 2,
+  "arcana": "魔術師",
+  "name": "ピクシー"
+}, {
+  "level": 8,
+  "arcana": "魔術師",
+  "name": "オロバス"
+}, {
+  "level": 16,
+  "arcana": "魔術師",
+  "name": "ジャックフロスト"
+}, {
+  "level": 25,
+  "arcana": "魔術師",
+  "name": "カハク"
+}, {
+  "level": 32,
+  "arcana": "魔術師",
+  "name": "ジャックランタン"
+}, {
+  "level": 39,
+  "arcana": "魔術師",
+  "name": "ディース"
+}, {
+  "level": 47,
+  "arcana": "魔術師",
+  "name": "ランダ"
+}, {
+  "level": 62,
+  "arcana": "魔術師",
+  "name": "ジン"
+}, {
+  "level": 69,
+  "arcana": "魔術師",
+  "name": "スルト"
+}, {
+  "level": 78,
+  "arcana": "魔術師",
+  "name": "マダ"
+}, {
+  "level": 11,
+  "arcana": "女教皇",
+  "name": "サキミタマ"
+}, {
+  "level": 17,
+  "arcana": "女教皇",
+  "name": "サラスヴァティ"
+}, {
+  "level": 22,
+  "arcana": "女教皇",
+  "name": "ハイピクシー"
+}, {
+  "level": 29,
+  "arcana": "女教皇",
+  "name": "ガンガー"
+}, {
+  "level": 37,
+  "arcana": "女教皇",
+  "name": "パールヴァティ"
+}, {
+  "level": 48,
+  "arcana": "女教皇",
+  "name": "キクリヒメ"
+}, {
+  "level": 59,
+  "arcana": "女教皇",
+  "name": "ハリティー"
+}, {
+  "level": 70,
+  "arcana": "女教皇",
+  "name": "ツィツィミトル"
+}, {
+  "level": 79,
+  "arcana": "女教皇",
+  "name": "スカアハ"
+}, {
+  "level": 9,
+  "arcana": "女帝",
+  "name": "センリ"
+}, {
+  "level": 18,
+  "arcana": "女帝",
+  "name": "ヤクシニー"
+}, {
+  "level": 26,
+  "arcana": "女帝",
+  "name": "ティターニア"
+}, {
+  "level": 34,
+  "arcana": "女帝",
+  "name": "ゴルゴン"
+}, {
+  "level": 44,
+  "arcana": "女帝",
+  "name": "ガブリエル"
+}, {
+  "level": 52,
+  "arcana": "女帝",
+  "name": "スカディ"
+}, {
+  "level": 60,
+  "arcana": "女帝",
+  "name": "マザーハーロット"
+}, {
+  "level": 70,
+  "arcana": "女帝",
+  "name": "アリラト"
+}, {
+  "level": 79,
+  "arcana": "女帝",
+  "name": "イシス"
+}, {
+  "level": 12,
+  "arcana": "皇帝",
+  "name": "オベロン"
+}, {
+  "level": 22,
+  "arcana": "皇帝",
+  "name": "キングフロスト"
+}, {
+  "level": 34,
+  "arcana": "皇帝",
+  "name": "セタンタ"
+}, {
+  "level": 41,
+  "arcana": "皇帝",
+  "name": "オオクニヌシ"
+}, {
+  "level": 45,
+  "arcana": "皇帝",
+  "name": "トート"
+}, {
+  "level": 51,
+  "arcana": "皇帝",
+  "name": "パピルサグ"
+}, {
+  "level": 65,
+  "arcana": "皇帝",
+  "name": "バロン"
+}, {
+  "level": 74,
+  "arcana": "皇帝",
+  "name": "オーディン"
+}, {
+  "level": 7,
+  "arcana": "法王",
+  "name": "オモイカネ"
+}, {
+  "level": 15,
+  "arcana": "法王",
+  "name": "アンズー"
+}, {
+  "level": 21,
+  "arcana": "法王",
+  "name": "シーサー"
+}, {
+  "level": 29,
+  "arcana": "法王",
+  "name": "ユニコーン"
+}, {
+  "level": 36,
+  "arcana": "法王",
+  "name": "フラロウス"
+}, {
+  "level": 45,
+  "arcana": "法王",
+  "name": "ホクトセイクン"
+}, {
+  "level": 52,
+  "arcana": "法王",
+  "name": "ケルベロス"
+}, {
+  "level": 60,
+  "arcana": "法王",
+  "name": "だいそうじょう"
+}, {
+  "level": 70,
+  "arcana": "法王",
+  "name": "ハチマン"
+}, {
+  "level": 76,
+  "arcana": "法王",
+  "name": "コウリュウ"
+}, {
+  "level": 25,
+  "arcana": "恋愛",
+  "name": "クイーンメイブ"
+}, {
+  "level": 33,
+  "arcana": "恋愛",
+  "name": "ウンディーネ"
+}, {
+  "level": 42,
+  "arcana": "恋愛",
+  "name": "リャナンシー"
+}, {
+  "level": 53,
+  "arcana": "恋愛",
+  "name": "ラファエル"
+}, {
+  "level": 64,
+  "arcana": "恋愛",
+  "name": "キュベレ"
+}, {
+  "level": 71,
+  "arcana": "恋愛",
+  "name": "イシュタル"
+}, {
+  "level": 2,
+  "arcana": "戦車",
+  "name": "スライム"
+}, {
+  "level": 6,
+  "arcana": "戦車",
+  "name": "ナタタイシ"
+}, {
+  "level": 12,
+  "arcana": "戦車",
+  "name": "エリゴール"
+}, {
+  "level": 18,
+  "arcana": "戦車",
+  "name": "アラミタマ"
+}, {
+  "level": 25,
+  "arcana": "戦車",
+  "name": "アレス"
+}, {
+  "level": 43,
+  "arcana": "戦車",
+  "name": "トリグラフ"
+}, {
+  "level": 54,
+  "arcana": "戦車",
+  "name": "キンキ"
+}, {
+  "level": 65,
+  "arcana": "戦車",
+  "name": "トール"
+}, {
+  "level": 72,
+  "arcana": "戦車",
+  "name": "アタバク"
+}, {
+  "level": 80,
+  "arcana": "戦車",
+  "name": "フツヌシ"
+}, {
+  "level": 5,
+  "arcana": "剛毅",
+  "name": "ザントマン"
+}, {
+  "level": 8,
+  "arcana": "剛毅",
+  "name": "ヴァルキリー"
+}, {
+  "level": 14,
+  "arcana": "剛毅",
+  "name": "ティターン"
+}, {
+  "level": 23,
+  "arcana": "剛毅",
+  "name": "ラクシャーサ"
+}, {
+  "level": 28,
+  "arcana": "剛毅",
+  "name": "クシミタマ"
+}, {
+  "level": 30,
+  "arcana": "剛毅",
+  "name": "オニ"
+}, {
+  "level": 42,
+  "arcana": "剛毅",
+  "name": "ハヌマーン"
+}, {
+  "level": 50,
+  "arcana": "剛毅",
+  "name": "カーリー"
+}, {
+  "level": 63,
+  "arcana": "剛毅",
+  "name": "ジークフリード"
+}, {
+  "level": 90,
+  "arcana": "剛毅",
+  "name": "ザオウゴンゲン"
+}, {
+  "level": 6,
+  "arcana": "隠者",
+  "name": "フォルネウス"
+}, {
+  "level": 17,
+  "arcana": "隠者",
+  "name": "イッポンダタラ"
+}, {
+  "level": 26,
+  "arcana": "隠者",
+  "name": "ラミア"
+}, {
+  "level": 33,
+  "arcana": "隠者",
+  "name": "モスマン"
+}, {
+  "level": 41,
+  "arcana": "隠者",
+  "name": "ヒトコトヌシ"
+}, {
+  "level": 48,
+  "arcana": "隠者",
+  "name": "クラマテング"
+}, {
+  "level": 55,
+  "arcana": "隠者",
+  "name": "ニーズホッグ"
+}, {
+  "level": 63,
+  "arcana": "隠者",
+  "name": "ネビロス"
+}, {
+  "level": 73,
+  "arcana": "隠者",
+  "name": "アラハバキ"
+}, {
+  "level": 82,
+  "arcana": "隠者",
+  "name": "オンギョウキ"
+}, {
+  "level": 35,
+  "arcana": "運命",
+  "name": "フォルトゥナ"
+}, {
+  "level": 44,
+  "arcana": "運命",
+  "name": "クロト"
+}, {
+  "level": 51,
+  "arcana": "運命",
+  "name": "ラケシス"
+}, {
+  "level": 58,
+  "arcana": "運命",
+  "name": "アナンタ"
+}, {
+  "level": 65,
+  "arcana": "運命",
+  "name": "アトロポス"
+}, {
+  "level": 72,
+  "arcana": "運命",
+  "name": "ノルン"
+}, {
+  "level": 4,
+  "arcana": "正義",
+  "name": "エンジェル"
+}, {
+  "level": 11,
+  "arcana": "正義",
+  "name": "アークエンジェル"
+}, {
+  "level": 19,
+  "arcana": "正義",
+  "name": "プリンシパリティ"
+}, {
+  "level": 27,
+  "arcana": "正義",
+  "name": "パワー"
+}, {
+  "level": 33,
+  "arcana": "正義",
+  "name": "ヴァーチャー"
+}, {
+  "level": 38,
+  "arcana": "正義",
+  "name": "ドミニオン"
+}, {
+  "level": 49,
+  "arcana": "正義",
+  "name": "ソロネ"
+}, {
+  "level": 58,
+  "arcana": "正義",
+  "name": "ウリエル"
+}, {
+  "level": 66,
+  "arcana": "正義",
+  "name": "メルキセデク"
+}, {
+  "level": 74,
+  "arcana": "正義",
+  "name": "スラオシャ"
+}, {
+  "level": 15,
+  "arcana": "刑死者",
+  "name": "ベリス"
+}, {
+  "level": 22,
+  "arcana": "刑死者",
+  "name": "ヨモツイクサ"
+}, {
+  "level": 27,
+  "arcana": "刑死者",
+  "name": "マカミ"
+}, {
+  "level": 39,
+  "arcana": "刑死者",
+  "name": "オルトロス"
+}, {
+  "level": 49,
+  "arcana": "刑死者",
+  "name": "ヤツフサ"
+}, {
+  "level": 56,
+  "arcana": "刑死者",
+  "name": "トウコツ"
+}, {
+  "level": 66,
+  "arcana": "刑死者",
+  "name": "ヘルズエンジェル"
+}, {
+  "level": 71,
+  "arcana": "刑死者",
+  "name": "ヴァスキ"
+}, {
+  "level": 82,
+  "arcana": "刑死者",
+  "name": "アティス"
+}, {
+  "level": 9,
+  "arcana": "死神",
+  "name": "グール"
+}, {
+  "level": 14,
+  "arcana": "死神",
+  "name": "モコイ"
+}, {
+  "level": 24,
+  "arcana": "死神",
+  "name": "マタドール"
+}, {
+  "level": 36,
+  "arcana": "死神",
+  "name": "サマエル"
+}, {
+  "level": 46,
+  "arcana": "死神",
+  "name": "モト"
+}, {
+  "level": 58,
+  "arcana": "死神",
+  "name": "ホワイトライダー"
+}, {
+  "level": 72,
+  "arcana": "死神",
+  "name": "アリス"
+}, {
+  "level": 78,
+  "arcana": "死神",
+  "name": "マハカーラ"
+}, {
+  "level": 4,
+  "arcana": "節制",
+  "name": "アプサラス"
+}, {
+  "level": 11,
+  "arcana": "節制",
+  "name": "シルフ"
+}, {
+  "level": 16,
+  "arcana": "節制",
+  "name": "カイチ"
+}, {
+  "level": 23,
+  "arcana": "節制",
+  "name": "ニギミタマ"
+}, {
+  "level": 31,
+  "arcana": "節制",
+  "name": "ミトラ"
+}, {
+  "level": 40,
+  "arcana": "節制",
+  "name": "ゲンブ"
+}, {
+  "level": 47,
+  "arcana": "節制",
+  "name": "セイリュウ"
+}, {
+  "level": 54,
+  "arcana": "節制",
+  "name": "スザク"
+}, {
+  "level": 62,
+  "arcana": "節制",
+  "name": "ビャッコ"
+}, {
+  "level": 69,
+  "arcana": "節制",
+  "name": "ユルング"
+}, {
+  "level": 73,
+  "arcana": "節制",
+  "name": "ヴィシュヌ"
+}, {
+  "level": 3,
+  "arcana": "悪魔",
+  "name": "ウコバク"
+}, {
+  "level": 10,
+  "arcana": "悪魔",
+  "name": "リリム"
+}, {
+  "level": 19,
+  "arcana": "悪魔",
+  "name": "ヴェータラ"
+}, {
+  "level": 28,
+  "arcana": "悪魔",
+  "name": "インキュバス"
+}, {
+  "level": 37,
+  "arcana": "悪魔",
+  "name": "パズス"
+}, {
+  "level": 44,
+  "arcana": "悪魔",
+  "name": "サキュバス"
+}, {
+  "level": 53,
+  "arcana": "悪魔",
+  "name": "リリス"
+}, {
+  "level": 61,
+  "arcana": "悪魔",
+  "name": "ベルフェゴール"
+}, {
+  "level": 68,
+  "arcana": "悪魔",
+  "name": "ベリアル"
+}, {
+  "level": 81,
+  "arcana": "悪魔",
+  "name": "ベルゼブブ"
+}, {
+  "level": 35,
+  "arcana": "塔",
+  "name": "トウテツ"
+}, {
+  "level": 46,
+  "arcana": "塔",
+  "name": "クー・フーリン"
+}, {
+  "level": 55,
+  "arcana": "塔",
+  "name": "アバドン"
+}, {
+  "level": 62,
+  "arcana": "塔",
+  "name": "マーラ"
+}, {
+  "level": 69,
+  "arcana": "塔",
+  "name": "マサカド"
+}, {
+  "level": 75,
+  "arcana": "塔",
+  "name": "ヨシツネ"
+}, {
+  "level": 80,
+  "arcana": "塔",
+  "name": "シヴァ"
+}, {
+  "level": 24,
+  "arcana": "星",
+  "name": "キウン"
+}, {
+  "level": 32,
+  "arcana": "星",
+  "name": "ネコショウグン"
+}, {
+  "level": 43,
+  "arcana": "星",
+  "name": "フウキ"
+}, {
+  "level": 50,
+  "arcana": "星",
+  "name": "ガネーシャ"
+}, {
+  "level": 57,
+  "arcana": "星",
+  "name": "ガルーダ"
+}, {
+  "level": 67,
+  "arcana": "星",
+  "name": "カルティケーヤ"
+}, {
+  "level": 75,
+  "arcana": "星",
+  "name": "サトゥルヌス"
+}, {
+  "level": 87,
+  "arcana": "星",
+  "name": "ルシフェル"
+}, {
+  "level": 20,
+  "arcana": "月",
+  "name": "アンドラス"
+}, {
+  "level": 27,
+  "arcana": "月",
+  "name": "ノズチ"
+}, {
+  "level": 34,
+  "arcana": "月",
+  "name": "ヤマタノオロチ"
+}, {
+  "level": 41,
+  "arcana": "月",
+  "name": "アルラウネ"
+}, {
+  "level": 48,
+  "arcana": "月",
+  "name": "ギリメカラ"
+}, {
+  "level": 57,
+  "arcana": "月",
+  "name": "スイキ"
+}, {
+  "level": 68,
+  "arcana": "月",
+  "name": "セト"
+}, {
+  "level": 77,
+  "arcana": "月",
+  "name": "バアル・ゼブル"
+}, {
+  "level": 84,
+  "arcana": "月",
+  "name": "サンダルフォン"
+}, {
+  "level": 10,
+  "arcana": "太陽",
+  "name": "カーシー"
+}, {
+  "level": 20,
+  "arcana": "太陽",
+  "name": "ホウオウ"
+}, {
+  "level": 31,
+  "arcana": "太陽",
+  "name": "ドゥン"
+}, {
+  "level": 40,
+  "arcana": "太陽",
+  "name": "ヤタガラス"
+}, {
+  "level": 47,
+  "arcana": "太陽",
+  "name": "ナラシンハ"
+}, {
+  "level": 53,
+  "arcana": "太陽",
+  "name": "タムリン"
+}, {
+  "level": 61,
+  "arcana": "太陽",
+  "name": "ジャターユ"
+}, {
+  "level": 68,
+  "arcana": "太陽",
+  "name": "ホルス"
+}, {
+  "level": 77,
+  "arcana": "太陽",
+  "name": "スパルナ"
+}, {
+  "level": 86,
+  "arcana": "太陽",
+  "name": "アスラおう"
+}, {
+  "level": 59,
+  "arcana": "審判",
+  "name": "アヌビス"
+}, {
+  "level": 67,
+  "arcana": "審判",
+  "name": "トランペッター"
+}, {
+  "level": 72,
+  "arcana": "審判",
+  "name": "ミカエル"
+}, {
+  "level": 76,
+  "arcana": "審判",
+  "name": "サタン"
+}, {
+  "level": 83,
+  "arcana": "審判",
+  "name": "メタトロン"
+}, {
+  "level": 90,
+  "arcana": "審判",
+  "name": "アルダー"
+}, {
+  "level": 93,
+  "arcana": "審判",
+  "name": "ルシファー"
+}, {
+  "level": 18,
+  "arcana": "永劫",
+  "name": "アメノウズメ"
+}, {
+  "level": 24,
+  "arcana": "永劫",
+  "name": "ナルキッソス"
+}, {
+  "level": 31,
+  "arcana": "永劫",
+  "name": "サティ"
+}, {
+  "level": 37,
+  "arcana": "永劫",
+  "name": "ナーガラジャ"
+}, {
+  "level": 44,
+  "arcana": "永劫",
+  "name": "クシナダヒメ"
+}, {
+  "level": 51,
+  "arcana": "永劫",
+  "name": "ケツアルカトル"
+}, {
+  "level": 58,
+  "arcana": "永劫",
+  "name": "キングー"
+}, {
+  "level": 65,
+  "arcana": "永劫",
+  "name": "ラクシュミ"
+}, {
+  "level": 74,
+  "arcana": "永劫",
+  "name": "カグヤ"
+}, {
+  "level": 20,
+  "arcana": "道化師",
+  "name": "グルル"
+}, {
+  "level": 27,
+  "arcana": "道化師",
+  "name": "タケミナカタ"
+}, {
+  "level": 34,
+  "arcana": "道化師",
+  "name": "ペイルライダー"
+}, {
+  "level": 40,
+  "arcana": "道化師",
+  "name": "ロア"
+}, {
+  "level": 47,
+  "arcana": "道化師",
+  "name": "バフォメット"
+}, {
+  "level": 55,
+  "arcana": "道化師",
+  "name": "クヴァンダ"
+}, {
+  "level": 62,
+  "arcana": "道化師",
+  "name": "チェルノボグ"
+}, {
+  "level": 68,
+  "arcana": "道化師",
+  "name": "セイテンタイセイ"
+}, {
+  "level": 77,
+  "arcana": "道化師",
+  "name": "マガツイザナギ"
+}]

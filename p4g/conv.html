@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width;">
+  <style>
+    html, body {
+      height: 100%;
+    }
+    body {
+      color: lightgrey;
+      background-color: black;
+    }
+    #persona-sel {
+      cursor: default;
+    }
+    .arcana, .persona, .level {
+      display: inline-block;
+    }
+    .arcana {
+      width: 3em;
+      text-align: center;
+    }
+    .arcana:hover, .persona:hover {
+      background-color: #222;
+    }
+    .arcana.active, .persona.active {
+      background-color: #444;
+    }
+    #persona-sel .list {
+      display: none;
+    }
+    #persona-sel .list.active {
+      display: inline-block;
+    }
+    .persona {
+      width: 9.5em;
+    }
+    .level {
+      width: 2.2ex;
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+<div id="persona-sel"></div>
+<pre id="result"></pre>
+</body>
+
+<script id="persona-sel-tmpl" type="text/ejs">
+<% for (var arcanum of arcana) { %>
+  <div class="arcana">
+    <%=arcanum.name %>
+  </div>
+<% } %>
+<% for (var arcanum of arcana) { %> 
+  <div class="list" data-arcana="<%=arcanum.name %>">
+<%  for(var persona of arcanum.personae) { %>
+    <div class="persona" data-persona="<%=persona.name %>">
+      <div class="level"><%=persona.level %></div>
+      <%=persona.name %>
+    </div>
+<%  } %>
+  </div>
+</div>
+<% } %>
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="../ejs.min.js"></script>
+<script>
+
+$(document).ready(function() {
+var convs = null;
+var personae = null;
+var level3conv = function(p) {
+  var prev = {level: -Infinity}
+  personae.forEach(function(p0) {
+    if (p.arcana === p0.arcana && p.level > p0.level
+      && (!prev || prev.level < p0.level)) {
+      prev = p0;
+    }
+  });
+  var lb = (prev.level-4)*3;
+  var ub = (p.level-5)*3+2;
+  return [lb, ub];
+};
+var cache_resolve = {};
+var resolve = function(arcana, lb, ub, names) {
+  var pairs = [];
+  for (var key in cache_resolve) {
+    var [res, level] = key.split(',');
+    if (res === arcana && lb <= level && level <= ub) {
+      for (var pair of cache_resolve[key]) {
+        var [p0, p1] = pair;
+        if (!names[p0.name] && !names[p1.name]) {
+          pairs.push(pair);
+        }
+      }
+    }
+  }
+  return pairs;
+};
+var search_init = function() {
+  for (var i = 0; i < personae.length; i++)
+    for (var j = i+1; j < personae.length; j++) {
+      var [p0, p1] = [personae[i], personae[j]];
+      var res = convs.conv2[p0.arcana][p1.arcana];
+      if (!res) {
+        continue;
+      }
+      var level = p0.level + p1.level;
+      if (!cache_resolve[[res, level]]) {
+        cache_resolve[[res, level]] = [];
+      }
+      cache_resolve[[res, level]].push([p0, p1]);
+    }
+  console.info(Object.keys(cache_resolve).length + ' pairs');
+};
+var search = function(name) {
+  var persona = personae.filter(function(p) {return p.name === name})[0];
+  var res = $('#result');
+  res.text(persona.name + '\n');
+  var [lb, ub] = level3conv(persona);
+  res.append(lb + ' - ' + ub + '\n');
+  var tried = {};
+  for (var p of personae.filter(function(p0) {return p0.name != persona.name && p0.level < ub-1})) {
+    for (var other in convs.conv3[p.arcana]) {
+      if (convs.conv3[p.arcana][other] !== persona.arcana) {
+        continue;
+      }
+      var names = {};
+      names[persona.name] = 1;
+      names[p.name] = 1;
+      var q = resolve(other, lb-p.level, ub-p.level, names);
+      if (q.length) {
+        for (var pair of q) {
+          var [p1, p2] = pair;
+          text = p.name + ' + ' + p1.name + ' + ' + p2.name + '\n';
+          res.append(text);
+        }
+      }
+    }
+  }
+};
+
+function makeSelector(q, opts) {
+  opts.eventName = opts.ev_name || 'click';
+  opts.className = opts.className || 'active';
+  opts.action = opts.action || function() {};
+  q.on(opts.eventName, function() {
+    var active = $(this);
+    active.addClass(opts.className);
+    q.not(active).removeClass(opts.className);
+    opts.action.apply(this);
+  });
+  return q;
+}
+
+var personae_d = $.getJSON('personae.json');
+var convs_d = $.getJSON('conv.json');
+var render = {};
+render.personaSel = ejs.compile($('#persona-sel-tmpl').html());
+
+var selector = {select: function() {}};
+convs_d.done(function(data) {
+  convs = data;
+  search_init();
+  selector.select = search;
+});
+personae_d.done(function(data) {
+  personae = data;
+  var sel_data = {arcana:[]};
+  var arcanum = {};
+  for (var persona of personae) {
+    if (arcanum.name != persona.arcana) {
+      arcanum = {name: persona.arcana, personae: []}
+      sel_data.arcana.push(arcanum);
+    }
+    arcanum.personae.push(persona);
+  }
+  var sel = $('#persona-sel');
+  sel.append(render.personaSel(sel_data));
+  var view = {arcana: sel.find('.arcana'), lists: sel.find('.list')};
+  var opts = {};
+  opts.action = function() {
+    var active = $(this);
+    var name = active.text().trim();
+    var activeList = view.lists.filter('[data-arcana="'+name+'"]');
+    view.lists.not(activeList).removeClass('active');
+    activeList.addClass('active');
+  };
+  makeSelector(view.arcana, opts).first().click();
+  opts = {};
+  opts.action = function() {
+    var active = $(this);
+    var name = active.data('persona');
+    selector.select(name);
+    var arcanum = active.parents('[data-arcana]').data('arcana');
+    sel.find('.arcana:contains("'+arcanum+'")').click();
+  }
+  view.personae = sel.find('[data-persona]');
+  makeSelector(view.personae, opts);
+});
+
+
+});
+</script>

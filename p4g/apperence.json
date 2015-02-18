@@ -1,0 +1,369 @@
+[{
+  "name": "月",
+  "day": [{
+    "location": "コニシ酒店前",
+    "communities": [{
+      "name": "刑死者"
+    }]
+  }, {
+    "location": "バス停",
+    "communities": [{
+      "name": "節制"
+    }]
+  }, {
+    "location": "学校 屋上",
+    "communities": [{
+      "name": "戦車"
+    }]
+  }, {
+    "location": "教室棟 1F廊下",
+    "communities": [{
+      "name": "女教皇"
+    }, {
+      "name": "運命"
+    }]
+  }, {
+    "location": "教室棟 2F廊下",
+    "communities": [{
+      "name": "魔術師"
+    }, {
+      "name": "太陽",
+      "rainy": true
+    }]
+  }],
+  "night": [{
+    "location": "丸久豆腐店前",
+    "communities": [{
+      "name": "恋愛"
+    }]
+  }, {
+    "location": "巽屋前",
+    "communities": [{
+      "name": "皇帝"
+    }]
+  }, {
+    "location": "惣菜大学前",
+    "communities": [{
+      "name": "剛毅"
+    }]
+  }]
+}, {
+  "name": "火",
+  "day": [{
+    "location": "コニシ酒店前",
+    "communities": [{
+      "name": "刑死者"
+    }]
+  }, {
+    "location": "学校 屋上",
+    "communities": [{
+      "name": "戦車"
+    }]
+  }, {
+    "location": "教室棟 1F廊下",
+    "communities": [{
+      "name": "女教皇"
+    }, {
+      "name": "運命"
+    }]
+  }, {
+    "location": "教室棟 2F廊下",
+    "communities": [{
+      "name": "剛毅"
+    }, {
+      "name": "太陽",
+      "rainy": true
+    }]
+  }],
+  "night": [{
+    "location": "コニシ酒店前",
+    "communities": [{
+      "name": "魔術師"
+    }]
+  }, {
+    "location": "スナック紫路宮前",
+    "communities": [{
+      "name": "月"
+    }]
+  }, {
+    "location": "バス停",
+    "communities": [{
+      "name": "塔",
+      "rainy": true
+    }]
+  }]
+}, {
+  "name": "水",
+  "day": [{
+    "location": "コニシ酒店前",
+    "communities": [{
+      "name": "刑死者"
+    }]
+  }, {
+    "location": "ベルベットルーム前",
+    "communities": [{
+      "name": "永劫"
+    }]
+  }, {
+    "location": "実習棟 1F廊下",
+    "communities": [{
+      "name": "皇帝"
+    }]
+  }, {
+    "location": "教室棟 1F廊下",
+    "communities": [{
+      "name": "女教皇"
+    }, {
+      "name": "月"
+    }]
+  }],
+  "night": [{
+    "location": "バス停",
+    "communities": [{
+      "name": "悪魔",
+      "rainy": true
+    }]
+  }, {
+    "location": "中華料理 愛家前",
+    "communities": [{
+      "name": "戦車"
+    }]
+  }, {
+    "location": "四目内堂書店前",
+    "communities": [{
+      "name": "運命"
+    }]
+  }]
+}, {
+  "name": "木",
+  "day": [{
+    "location": "コニシ酒店前",
+    "communities": [{
+      "name": "刑死者"
+    }]
+  }, {
+    "location": "学校 屋上",
+    "communities": [{
+      "name": "戦車"
+    }]
+  }, {
+    "location": "実習棟 1F廊下",
+    "communities": [{
+      "name": "皇帝"
+    }]
+  }, {
+    "location": "教室棟 1F廊下",
+    "communities": [{
+      "name": "女教皇"
+    }, {
+      "name": "運命"
+    }, {
+      "name": "月"
+    }]
+  }, {
+    "location": "教室棟 2F廊下",
+    "communities": [{
+      "name": "魔術師"
+    }, {
+      "name": "剛毅"
+    }, {
+      "name": "太陽",
+      "rainy": true
+    }]
+  }],
+  "night": [{
+    "location": "バス停",
+    "communities": [{
+      "name": "悪魔",
+      "rainy": true
+    }, {
+      "name": "塔",
+      "rainy": true
+    }]
+  }, {
+    "location": "丸久豆腐店前",
+    "communities": [{
+      "name": "恋愛"
+    }]
+  }, {
+    "location": "巽屋前",
+    "communities": [{
+      "name": "皇帝"
+    }]
+  }]
+}, {
+  "name": "金",
+  "day": [{
+    "location": "バス停",
+    "communities": [{
+      "name": "節制"
+    }]
+  }, {
+    "location": "教室棟 1F廊下",
+    "communities": [{
+      "name": "恋愛"
+    }, {
+      "name": "月"
+    }]
+  }, {
+    "location": "教室棟 2F廊下",
+    "communities": [{
+      "name": "魔術師"
+    }]
+  }],
+  "night": [{
+    "location": "コニシ酒店前",
+    "communities": [{
+      "name": "魔術師"
+    }]
+  }, {
+    "location": "バス停",
+    "communities": [{
+      "name": "悪魔",
+      "rainy": true
+    }]
+  }, {
+    "location": "バス停前",
+    "communities": [{
+      "name": "太陽"
+    }]
+  }, {
+    "location": "商店街南側 ポスト前",
+    "communities": [{
+      "name": "女教皇"
+    }]
+  }]
+}, {
+  "name": "土",
+  "day": [{
+    "location": "バス停",
+    "communities": [{
+      "name": "節制"
+    }]
+  }, {
+    "location": "ベルベットルーム前",
+    "communities": [{
+      "name": "永劫"
+    }]
+  }, {
+    "location": "学校 屋上",
+    "communities": [{
+      "name": "戦車"
+    }]
+  }, {
+    "location": "実習棟 1F廊下",
+    "communities": [{
+      "name": "皇帝"
+    }]
+  }, {
+    "location": "教室棟 1F廊下",
+    "communities": [{
+      "name": "恋愛"
+    }, {
+      "name": "運命"
+    }]
+  }, {
+    "location": "教室棟 2F廊下",
+    "communities": [{
+      "name": "魔術師"
+    }, {
+      "name": "剛毅"
+    }]
+  }],
+  "night": [{
+    "location": "バス停",
+    "communities": [{
+      "name": "塔",
+      "rainy": true
+    }]
+  }, {
+    "location": "四目内堂書店前",
+    "communities": [{
+      "name": "運命"
+    }]
+  }, {
+    "location": "辰姫神社前",
+    "communities": [{
+      "name": "刑死者"
+    }]
+  }]
+}, {
+  "name": "日",
+  "day": [{
+    "location": "ジュネス 西側出入口",
+    "communities": [{
+      "name": "魔術師"
+    }]
+  }, {
+    "location": "ベルベットルーム前",
+    "communities": [{
+      "name": "永劫"
+    }]
+  }, {
+    "location": "丸久豆腐店前",
+    "communities": [{
+      "name": "恋愛"
+    }]
+  }, {
+    "location": "巽屋前",
+    "communities": [{
+      "name": "皇帝"
+    }]
+  }, {
+    "location": "辰姫神社",
+    "communities": [{
+      "name": "隠者",
+      "rainy": true
+    }]
+  }, {
+    "location": "鮫川河川敷 川原",
+    "communities": [{
+      "name": "死神"
+    }]
+  }],
+  "night": [{
+    "location": "中華料理 愛家前",
+    "communities": [{
+      "name": "戦車"
+    }]
+  }, {
+    "location": "商店街南側 ポスト前",
+    "communities": [{
+      "name": "女教皇"
+    }]
+  }]
+}, {
+  "name": "毎日",
+  "day": [{
+    "location": "辰姫神社",
+    "communities": [{
+      "name": "隠者",
+      "rainy": true
+    }]
+  }],
+  "night": []
+}, {
+  "name": "不定",
+  "day": [{
+    "location": "ジュネス 西側出入口",
+    "communities": [{
+      "name": "道化師",
+      "rainy": true
+    }]
+  }],
+  "night": [{
+    "location": "ガソリンスタンド前",
+    "communities": [{
+      "name": "道化師"
+    }]
+  }, {
+    "location": "堂島宅 居間",
+    "communities": [{
+      "name": "法王",
+      "rainy": true
+    }, {
+      "name": "正義",
+      "rainy": true
+    }]
+  }]
+}]

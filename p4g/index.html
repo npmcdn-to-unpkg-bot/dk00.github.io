@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=320px;">
+  <style>
+    body {
+      color: lightgrey;
+      background-color: black;
+      font-size: 4vw;
+    }
+    html, body {
+      height: 100%;
+    }
+    .content {
+      height: 84%;
+      overflow-y: auto;
+      overflow-x: visible;
+    }
+    .nav {
+      text-align: center;
+      height: 15%;
+      background-color: #333;
+    }
+    .nav a, .nav a:visited {
+      display: inline-block;
+      color: lightgreen;
+      white-space: nowrap;
+      font-size: 5.8vw;
+      text-decoration: none;
+    }
+
+    .cond {
+      background: #330;
+    }
+    .section, .point, .selection {
+      display: inline-block;
+    }
+    .section {
+      min-width: 49%;
+      margin-bottom: 2vw;
+    }
+    .selection {
+      white-space: nowrap;
+      max-width: 96%;
+    }
+    td[rowspan], .point, .selection {
+      vertical-align: top;
+    }
+    .head td{
+      padding-top: 5px;
+    }
+    td.rainy {
+      background-color: #033
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+  </div>
+  <div class="nav">
+  </div>
+</body>
+
+<script id="main" type="text/ejs">
+<% for (item of data) { %>
+<div class="entry">
+  <div class="date"><%=item.date %></div>
+  <pre><%=item.events %></pre>
+</div>
+<% } %>
+</script>
+<script id="sched-tmpl" type="text/ejs">
+<table id="<%=target %>">
+<% for (var i = 0; i < data.length; i++) {
+    var item = data[i];
+    times = ['day', 'night'];
+    for (var j = 0; j < times.length; j++) {
+      var time = times[j];
+      var first = true;
+      for (var k = 0; k < item[time].length; k++) {
+        var loc = item[time][k]; %>
+  <tr<%=first?' class=head':'' %> >
+<%      if (first) { %>
+    <td rowspan="<%=item[time].length%>">
+      <%=time=='day'? item.name: '夜' %>
+    </td>
+<%        first = false;
+        } %>
+    <td><%=loc.location %></td>
+<%      for (var l = 0; l < loc.communities.length; l++) {
+          var comm = loc.communities[l]; %>
+    <td<%=comm.rainy?' class=rainy':'' %>>
+      <%=comm.name %>
+    </td>
+<%      }
+      } %>
+  </tr>
+<%  }
+  } %>
+<table>
+</script>
+
+<script id="sel-tmpl" type="text/ejs">
+<h3 id=<%=target%>><%=name%></h3>
+<% for (var i = 0; i < selections.length; i++) {
+    var part = selections[i]; %>
+<%  if (typeof part === 'string') { %>
+<div class="cond"><%=part%></div>
+<%  } else { %>
+<%    for (var j = 0; j < part.length; j++) {
+        var section = part[j]; %>
+<div class="section">
+  <div class="point">
+<%      for (var k = 0; k < section.length; k++) { %>
+  <%=section[k].point || ''%><br>
+<%      }%>
+  </div><div class="selection">
+<%      for (var k = 0; k < section.length; k++) { %>
+  <%=section[k].text%><br>
+<%      }%>
+  </div>
+</div>
+<%    }
+    }
+  } %>
+</script>
+<script id="nav-tmpl" type="text/ejs">
+ <a href="#<%=target%>"><%=name%></a>&nbsp;
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.slim.min.js"></script>
+<script src="/ejs.min.js"></script>
+<script>
+$(document).ready(function() {
+var apr_def = $.getJSON('apperence.json');
+var sel_def = $.getJSON('selections.json');
+var render = {};
+render.sched = ejs.compile($('#sched-tmpl').html());
+render.sel = ejs.compile($('#sel-tmpl').html());
+render.nav = ejs.compile($('#nav-tmpl').html());
+
+var apr = {name: '⬆', target: 'apperence'};
+$('.nav').append(render.nav(apr));
+var render_apr = apr_def.done(function(data) {
+  apr.data = data;
+  $('.content').append(render.sched(apr));
+});
+
+$.when(sel_def, render_apr).done(function(sel) {
+  sel = sel[0];
+  for (var i = 0; i < sel.length; i++) {
+    sel[i].target = 'arcana-' + i;
+    $('.content').append(render.sel(sel[i]));
+    $('.nav').append(render.nav(sel[i]));
+  }
+});
+
+});
+</script>
