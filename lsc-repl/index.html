@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <title>LiveScript Compiler REPL</title>
+    <meta charset="utf-8" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/ir-black.min.css"
+    rel="stylesheet" />
+    <link href="index.css" rel="stylesheet" />
+    <script src="//livescript.net/livescript-1.5.0-min.js"></script>
+    <script src="//ajaxorg.github.io/ace-builds/src-min-noconflict/ace.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js">
+      "
+    </script>
+  </head>
+  
+  <body>
+    <div id="editor"></div><pre id="result"></pre>
+    <script src="index.ls" type="text/ls"></script>
+    <script type="text/javascript">
+      require('livescript').go()
+    </script>
+  </body>
+
+</html>
