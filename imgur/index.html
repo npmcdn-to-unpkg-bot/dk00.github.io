@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Imgur URL List Uploader</title>
+    <script src="https://code.jquery.com/jquery-3.1.0.slim.min.js"></script>
+    <script src="https://npmcdn.com/queue.ls@0.1.1"></script>
+    <script src="index.js"></script>
+    <style>
+      html, body {
+        max-height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: black;
+        color: lightgrey;
+      }
+      body {
+        display: flex;
+        flex-flow: column;
+      }
+      #inputs {
+        display: flex;
+      }
+      #inputs input {
+        flex: 1;
+      }
+      #status {
+        flex: 1;
+      }
+    </style>
+
+  </head>
+  <body>
+    <a href="https://api.imgur.com/oauth2/authorize?client_id=4a5fbf26fd7ce29&response_type=token">
+      login
+    </a>
+    <div id="inputs">
+      Upload to:
+      <select id="album">
+        <option>Login to load your album list</option>
+      </select>
+      <input id="urls" placeholder="paste URLs, one per line">
+    </div>
+    <div id="status">
+    </div>
+  </body>
+</html>
