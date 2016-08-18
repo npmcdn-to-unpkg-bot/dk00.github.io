@@ -58,7 +58,6 @@ handle-url = (url) ->
     status.text "done: #url"
 
 handle-paste = (event) ->
-  event.preventDefault!
   event.clipboardData.getData \text .split \\n
   .forEach handle-url
 
@@ -67,7 +66,8 @@ session.list-albums!then ({data: albums}) ->
   $ \#album .empty!prepend albums.map ({title, id}) ->
     $ \<option> .text title .attr \value id
 
-document.querySelector \#urls .addEventListener \paste handle-paste
+document.querySelector \#urls .addEventListener \paste (.preventDefault!)
+document.addEventListener \paste handle-paste
 
 fetch \README.md .then (.text!) .then ->
   $ \#readme .html marked it

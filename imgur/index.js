@@ -81,7 +81,6 @@ $(function(){
     });
   };
   handlePaste = function(event){
-    event.preventDefault();
     return event.clipboardData.getData('text').split('\n').forEach(handleUrl);
   };
   session.listAlbums().then(function(arg$){
@@ -96,7 +95,10 @@ $(function(){
       return $('<option>').text(title).attr('value', id);
     }));
   });
-  document.querySelector('#urls').addEventListener('paste', handlePaste);
+  document.querySelector('#urls').addEventListener('paste', function(it){
+    return it.preventDefault();
+  });
+  document.addEventListener('paste', handlePaste);
   return fetch('README.md').then(function(it){
     return it.text();
   }).then(function(it){
