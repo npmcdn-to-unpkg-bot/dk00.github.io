@@ -1,5 +1,10 @@
 <- $
-client-id = \4a5fbf26fd7ce29
+client-id = $ \#client-id .val!
+$ \#client-id .on \change ->
+  client-id := @value
+  $ \#login .attr \href "https://api.imgur.com/oauth2/authorize?client_id=#client-id&response_type=token"
+.trigger \change
+
 params = do ->
   p = /([^&=]+)=([^&]*)/g
   hash = location.hash.slice 1
