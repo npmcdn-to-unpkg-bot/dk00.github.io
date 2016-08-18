@@ -1,3 +1,42 @@
+window.imgur = ->
+  params = do ->
+    part = /([^&=]+)=([^&]*)/g
+    hash = location.hash.slice 1
+    data = {}
+    while m = part.exec hash
+      [, key, value] = m.map decodeURIComponent
+      data[key] = value
+    data
+
+  headers = Authorization: "Bearer #{params.access_token}"
+
+  params: params
+  call: (args) ->
+    endpoint = args.endpoint || args
+    url = "https://api.imgur.com/3/#endpoint"
+    options = {headers}
+
+    if args.data
+      body = new FormData
+      for key, value of that
+        body.append key, value
+      options <<< method: \POST body
+
+    fetch url, options .then (.json!)
+
+  list-albums: ->
+    if params.account_username
+      @call "account/#that/albums"
+    else
+      Promise.resolve []
+
+  upload: ->
+    data =
+      image: it
+      album: $ \#album .val!
+      name: /\/([^/]+)$/exec it ?.1
+    @call {endpoint: \image data}
+
 <- $
 client-id = $ \#client-id .val!
 $ \#client-id .on \change ->
@@ -5,35 +44,8 @@ $ \#client-id .on \change ->
   $ \#login .attr \href "https://api.imgur.com/oauth2/authorize?client_id=#client-id&response_type=token"
 .trigger \change
 
-params = do ->
-  p = /([^&=]+)=([^&]*)/g
-  hash = location.hash.slice 1
-  data = {}
-  while m = p.exec hash
-    [, key, value] = m.map decodeURIComponent
-    data[key] = value
-  data
-
-headers = Authorization: "Bearer #{params.access_token}"
-list-albums = ->
-  url = "https://api.imgur.com/3/account/#{params.account_username}/albums"
-  fetch url, {headers} .then (.json!)
-
-upload-url = ->
-  data =
-    image: it
-    album: $ \#album .val!
-    type: \URL
-    name: /\/([^/]+)$/exec it ?.1
-
-  body = new FormData
-  for key, value of data
-    body.append key, value
-
-  fetch \https://api.imgur.com/3/image {method: \POST body, headers}
-  .then (.json!)
-
 q = queue!
+session = window.imgur!
 
 handle-url = (url) ->
   status = $ \<div>
@@ -41,7 +53,7 @@ handle-url = (url) ->
   status.text "waiting: #url"
   q.add ->
     status.text "uploading: #url"
-    upload-url url
+    session.upload url
   .then ->
     status.text "done: #url"
 
@@ -50,9 +62,12 @@ handle-paste = (event) ->
   event.clipboardData.getData \text .split \\n
   .forEach handle-url
 
-if params.account_username
-  list-albums!then ({data: albums}) ->
-    $ \#album .empty!prepend albums.map ({title, id}) ->
-      $ \<option> .text title .attr \value id
+session.list-albums!then ({data: albums}) ->
+  return if albums.length < 1
+  $ \#album .empty!prepend albums.map ({title, id}) ->
+    $ \<option> .text title .attr \value id
 
 document.querySelector \#urls .addEventListener \paste handle-paste
+
+fetch \README.md .then (.text!) .then ->
+  $ \#readme .html marked it
